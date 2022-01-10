@@ -1,0 +1,43 @@
+.footer {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3/4;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 1;
+  grid-row: 5/6;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+}
+
+.contactFooter {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  padding-right: 1rem;
+  overflow: hidden;
+  text-decoration: none;
+  outline: none;
+  color: rgba(0, 0, 0, 0.85);
+  background: transparent;
+  font-size: 0.85rem;
+}
+
+a:link {
+  color: rgba(0, 0, 0, 0.85);
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1200px) {
+  .footer {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 6;
+    -ms-grid-row-span: 1;
+    grid-row: 6/7;
+    text-align: center;
+  }
+}
+/*# sourceMappingURL=Footer.module.css.map */

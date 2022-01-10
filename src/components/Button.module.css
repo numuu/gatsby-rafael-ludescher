@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 5px;
+  position: relative;
+  margin: 0;
+  padding: 0.2rem;
+  overflow: hidden;
+  font-family: 'Titillium Web', sans-sarif;
+  text-decoration: none;
+  font-size: 12px;
+  outline: none;
+  color: black;
+  background: transparent;
+}
+
+.button:link, .button:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.buttonActive {
+  background-color: white;
+}
+/*# sourceMappingURL=Button.module.css.map */

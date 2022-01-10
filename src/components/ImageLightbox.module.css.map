@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,eAAe,CAAA;EACX,gBAAgB,EAAE,yBAAuB;EACzC,MAAM,EAAE,GAAG;EACX,aAAa,EAAE,GAAG;EAClB,OAAO,EAAE,GAAG;EAEZ,KAAK,EAAE,IAAI;EACX,UAAU,EAAE,KAAK;EAEjB,QAAQ,EAAE,MAAM;EAEhB,WAAW,EAAE,GAAG;EAChB,QAAQ,EAAE,GAAG;CAChB;;AAED,AAAA,MAAM,CAAA;EACF,MAAM,EAAE,KAAK;CAChB",
+    "sources": [
+        "ImageLightbox.module.scss"
+    ],
+    "names": [],
+    "file": "ImageLightbox.module.css"
+}
