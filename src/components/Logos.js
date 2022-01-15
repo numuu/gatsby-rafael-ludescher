@@ -15,11 +15,8 @@ const Logos = ({ originalNames }) => {
                       node {
                         relativePath
                         childImageSharp {
-                          fluid(maxHeight: 30) {
-                            originalName
-                            presentationHeight
-                          }
                           gatsbyImageData(layout: FIXED, height: 30)
+                          id
                         }
                       }
                     }
@@ -29,12 +26,12 @@ const Logos = ({ originalNames }) => {
         `
     );
 
-    console.log(originalNames);
+    //console.log(originalNames);
     const images = [];
 
     for(var i = 0; i < originalNames.length; i++) {
         for ( var j = 0; j < data.img.edges.length; j++){
-            if(data.img.edges[j].node.childImageSharp.fluid.originalName === originalNames[i]){
+            if(data.img.edges[j].node.relativePath === "logos/" + originalNames[i]){
                 images.push(data.img.edges[j])
             }
         } 
@@ -44,13 +41,14 @@ const Logos = ({ originalNames }) => {
         return null;
     }
 
-    console.log("Images 0: " + images[0].node.childImageSharp.fluid.originalName);
+    console.log("images: " + images);
 
     return images.map((image) => (
-        <li key={image.node.id}>
+        <li key={image.node.childImageSharp.id}>
             <GatsbyImage
-            fluid={image.node.childImageSharp.fluid}
-
+            
+            image = {image.node.childImageSharp.gatsbyImageData}
+            alt={""}
             className={textStyles.logo}
             />
         </li>

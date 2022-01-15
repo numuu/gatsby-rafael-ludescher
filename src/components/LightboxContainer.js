@@ -16,8 +16,8 @@ const LightboxContainer = ({
 }) => {
   const array = []
 
-  images.forEach(image =>
-    array.push(<NonStretchedImage sharp={image.node.childImageSharp.gatsbyImageData}/>)
+  images.forEach(img =>
+    array.push(<NonStretchedImage image={img.node.childImageSharp.gatsbyImageData}/>)
   )
 
   return (
@@ -26,9 +26,9 @@ const LightboxContainer = ({
       discourageDownloads={true}
       clickOutsideToClose={true}
       imageCaption={getTitle(images[selectedImage].node.childImageSharp.fluid.originalName)}
-      mainSrc={array[selectedImage]}
-      nextSrc={array[(selectedImage + 1) % array.length]}
-      prevSrc={array[(selectedImage + array.length - 1) % images.length]}
+      mainSrc={toString(array[selectedImage])}
+      nextSrc={toString(array[(selectedImage + 1) % array.length])}
+      prevSrc={toString(array[(selectedImage + array.length - 1) % images.length])}
       onCloseRequest={handleClose}
       onMovePrevRequest={handlePrevRequest(selectedImage, array.length)}
       onMoveNextRequest={handleNextRequest(selectedImage, array.length)}

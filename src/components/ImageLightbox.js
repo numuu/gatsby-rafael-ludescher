@@ -51,13 +51,17 @@ const GalleryComponent = ({directory}) => {
           }
         }
       `}
+      
 
-      render={data => {        
+
+      render={data => {    
+       // console.log("before render " + data.source.edges);    
         const images = [];
         
-        for ( var i = 0; i < data.file.edges.length; i++){
-            if(data.file.edges[i].node.relativeDirectory === directory){
-                images.push(data.file.edges[i])
+        for ( var i = 0; i < data.source.edges.length; i++){
+            console.log("relativeDirectory " + i + ": " + data.source.edges[i].node.relativeDirectory); 
+            if(data.source.edges[i].node.relativeDirectory === "img/" + directory){
+                images.push(data.source.edges[i])
             }
         } 
         if (!images){
@@ -66,9 +70,10 @@ const GalleryComponent = ({directory}) => {
 
         images.sort(compare);
 
+        console.log("directory: " + directory);
         console.log("selected Image: " + selectedImage);
         console.log("images[0]: " + images[0]);
-        console.log("images[0].node.relativeDirectory: " + images[0].node.relativeDirectory);
+        //console.log("images[0].node.relativeDirectory: " + images[0].node.relativeDirectory);
 
 
         //images[selectedImage].childImageSharp.fluid
