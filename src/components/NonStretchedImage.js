@@ -25,7 +25,7 @@ const NonStretchedImage = props => {
   } else {
     if (props.fluid && props.gatsbyImageData.height) {
       normalizedProps = {
-        ...props,
+        ...props, 
         style: {
           ...(props.style || {}),
           //width: "auto",

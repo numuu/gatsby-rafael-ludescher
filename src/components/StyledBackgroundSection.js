@@ -45,7 +45,7 @@ const StyledBackgroundSection = ({ fileName }) => {
                 preserveStackingContext
             >
                 <div style={{
-                    maxHeight: `1em`,
+                    
                     position: `absolute`,
                     backgroundPosition:`left`,
                     backgroundRepeat: `no-repeat`,
@@ -54,7 +54,7 @@ const StyledBackgroundSection = ({ fileName }) => {
                   
                     filter: `blur(12px)`,
                                       
-                    height: `150vmax`,
+                    height: `1 em`,
                     minWidth: `100%`}}>
                         <GatsbyImage image={image} alt={""}/>
                     </div>

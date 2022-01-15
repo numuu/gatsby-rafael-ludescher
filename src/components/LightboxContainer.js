@@ -4,8 +4,9 @@ import React from "react"
 //https://reactjsexample.com/lightbox-for-components-or-images-built-for-react/
 import Lightbox from "react-image-lightbox"
 import 'react-image-lightbox/style.css'
+import { GatsbyImage } from "gatsby-plugin-image" 
 
-import NonStretchedImage from "./nonStretchedImage"
+//import NonStretchedImage from "./nonStretchedImage"
 
 const LightboxContainer = ({
   images,
@@ -16,9 +17,14 @@ const LightboxContainer = ({
 }) => {
   const array = []
 
-  images.forEach(image =>
-    array.push(<NonStretchedImage image={image.childImageSharp}/>)
+  for(var i = 0; i < images.length - 1; i++){
+    array.push(<GatsbyImage image={images[i].node.childImageSharp.gatsbyImageData} alt=""/>)
+  }
+  
+  /*images.forEach(image =>
+    array.push(<GatsbyImage image={image.node.childImageSharp.gatsbyImageData} alt=""/>)
   )
+  */
 
   return (
     <Lightbox
@@ -51,7 +57,7 @@ function getTitle(originalName){
       //author[author.length] = author[author.length].substring(0, author[author.length].length - 4);
       //author[i] = parseInt(author[i]);
     }
-      console.log(author[i] + " + i: " + i);
+      //console.log(author[i] + " + i: " + i);
       author_fin.push(author[i]);
       author_fin.push(" ");
   }
