@@ -36,16 +36,13 @@ const GalleryComponent = ({directory}) => {
           allFile(filter: {sourceInstanceName: {regex: "/(images)/"}}) {
             edges {
               node {
+                relativeDirectory
                 childImageSharp {
-                  fluid(maxWidth: 800) {
+                  fixed {
                     originalName
-                    presentationHeight
-                    presentationWidth
-                    src
                   }
                   gatsbyImageData(layout: FIXED, width: 800, quality: 90)
                 }
-                relativeDirectory
               }
             }
           }
@@ -59,7 +56,7 @@ const GalleryComponent = ({directory}) => {
         const images = [];
         
         for ( var i = 0; i < data.source.edges.length; i++){
-            console.log("relativeDirectory " + i + ": " + data.source.edges[i].node.relativeDirectory); 
+           // console.log("relativeDirectory " + i + ": " + data.source.edges[i].node.relativeDirectory); 
             if(data.source.edges[i].node.relativeDirectory === "img/" + directory){
                 images.push(data.source.edges[i])
             }
@@ -69,12 +66,12 @@ const GalleryComponent = ({directory}) => {
         }
 
         images.sort(compare);
-
+        /*
         console.log("directory: " + directory);
-        console.log("selected Image: " + selectedImage);
+        console.log("selected Image in ImageLightbox: " + selectedImage);
         console.log("images[0]: " + images[0]);
         //console.log("images[0].node.relativeDirectory: " + images[0].node.relativeDirectory);
-
+        */
 
         //images[selectedImage].childImageSharp.fluid
 
@@ -82,7 +79,8 @@ const GalleryComponent = ({directory}) => {
             <div className={LightboxStyles.imagecontainer}>
                 <Thumbnail images={images} handleOpen={handleOpen} selectedImage={selectedImage}/>
                 
-                {console.log("Images: " + images[selectedImage] + " selected Image " + selectedImage + " i: " + i + " showLightbox: " + showLightbox)}
+                {//console.log("Images: " + images[selectedImage] + " selected Image " + selectedImage + " i: " + i + " showLightbox: " + showLightbox)
+                }
 
                 {showLightbox && selectedImage !== null && (
                 <LightBoxContainer
@@ -101,10 +99,10 @@ const GalleryComponent = ({directory}) => {
 }
 
 function compare( a, b ) {
-    if ( a.node.childImageSharp.fluid.originalName < b.node.childImageSharp.fluid.originalName ){
+    if ( a.node.childImageSharp.fixed.originalName < b.node.childImageSharp.fixed.originalName ){
       return -1;
     }
-    if ( a.node.childImageSharp.fluid.originalName > b.node.childImageSharp.fluid.originalName ){
+    if ( a.node.childImageSharp.fixed.originalName > b.node.childImageSharp.fixed.originalName ){
       return 1;
     }
     return 0;

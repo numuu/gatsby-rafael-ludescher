@@ -2,8 +2,8 @@ import React from 'react'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-//import { getImage, GatsbyImage } from "gatsby-plugin-image"
-//import { convertToBgImage } from "gbimage-bridge"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge"
 
 //import styled from 'styled-components'
 
@@ -29,19 +29,24 @@ const StyledBackgroundSection = ({ fileName }) => {
     console.log(data.img.edges);
     console.log(fileName);
     
-    const image = data.img.edges.find(
+    const image = getImage(data.img.edges.find(
         ({ node }) => node.relativePath === "backgrounds/" + fileName
-        ).node;
+        ).node);
     if (!image) {
         return null;
     }
 
+    const bgImage = convertToBgImage(image);
+
     return (
             <BackgroundImage
-                sharp={image.childImageSharp.gatsbyImageData.images.src}
-                style={{
-
-                    position: `relative`,
+                Tag="section"
+                {...bgImage}
+                preserveStackingContext
+            >
+                <div style={{
+                    maxHeight: `1em`,
+                    position: `absolute`,
                     backgroundPosition:`left`,
                     backgroundRepeat: `no-repeat`,
                     backgroundSize: `cover`,
@@ -50,9 +55,10 @@ const StyledBackgroundSection = ({ fileName }) => {
                     filter: `blur(12px)`,
                                       
                     height: `150vmax`,
-                    minWidth: `100%`
-                }}
-            />
+                    minWidth: `100%`}}>
+                        <GatsbyImage image={image} alt={""}/>
+                    </div>
+            </BackgroundImage>
     );
     
 }

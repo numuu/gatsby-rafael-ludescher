@@ -3,8 +3,8 @@ import { GatsbyImage } from "gatsby-plugin-image"
 
 const NonStretchedImage = props => {
   let normalizedProps = props
-  if (props.fluid.presentationWidth > props.fluid.presentationHeight){
-    if (props.fluid && props.fluid.presentationWidth) {
+  if (props.gatsbyImageData.width > props.gatsbyImageData.height){
+    if (props.gatsbyImageData && props.gatsbyImageData.width) {
       normalizedProps = {
         ...props,
         style: {
@@ -13,7 +13,7 @@ const NonStretchedImage = props => {
           // maxHeight: window.innerHeight - 50,
          // maxWidth: props.fluid.presentationWidth,
          
-          maxWidth: props.fluid.presentatonWidth,
+          maxWidth: props.gatsbyImageData.width,
           height: "90%",        
           //maxWidth: props.fluid.presentationWidth,
           margin: "50px auto 0", 
@@ -23,7 +23,7 @@ const NonStretchedImage = props => {
       }
     }
   } else {
-    if (props.fluid && props.fluid.presentationHeight) {
+    if (props.fluid && props.gatsbyImageData.height) {
       normalizedProps = {
         ...props,
         style: {
