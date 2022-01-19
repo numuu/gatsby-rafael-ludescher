@@ -9,11 +9,16 @@ const Textbody = (props) => {
         console.log("props.keyprop: " + props.keyprop);
         return (
             <div className={textStyles.textcontainer} key={props.keyprop + textStyles.textcontainer}>
-                <div className={textStyles.text}>
-                    {props.children}  
+                <div className={textStyles.textbox} key={props.keyprop + textStyles.textbox}>
+                    <div className={textStyles.text}>
+                        {props.children}  
+                    </div>
                 </div>
+                
                 <div className={textStyles.logos} key={props.keyprop + textStyles.logos}>
-                    <Logo originalNames = {props.originalNames}/>
+                        <div className={textStyles.logosContainer}>
+                            <Logo originalNames = {props.originalNames}/>
+                        </div>
                 </div>
             </div>
         )

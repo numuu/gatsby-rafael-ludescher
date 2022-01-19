@@ -5,8 +5,9 @@ import React from "react"
 import Lightbox from "react-image-lightbox"
 import 'react-image-lightbox/style.css'
 import { GatsbyImage } from "gatsby-plugin-image" 
-
 //import NonStretchedImage from "./nonStretchedImage"
+
+//import NonStretchedImage from "./NonStretchedImage.js"
 
 const LightboxContainer = ({
   images,
@@ -15,16 +16,21 @@ const LightboxContainer = ({
   handlePrevRequest,
   handleNextRequest,
 }) => {
-  const array = []
+//   const array = []
+// /*
+//   for(var i = 0; i < images.length - 1; i++){
+//     array.push(<GatsbyImage image={images[i].node.childImageSharp.gatsbyImageData} alt={""}/>)
+//   }
+//   */
 
-  for(var i = 0; i < images.length - 1; i++){
-    array.push(<GatsbyImage image={images[i].node.childImageSharp.gatsbyImageData} alt=""/>)
-  }
+//   images.forEach(img =>
+//     array.push(<GatsbyImage image={img.node.childImageSharp.gatsbyImageData} alt={""} />)
+//   )
+
+  const array = images.map((val) => val.node.childImageSharp.gatsbyImageData.images.fallback.src)
+
+  console.log('array', array)
   
-  /*images.forEach(image =>
-    array.push(<GatsbyImage image={image.node.childImageSharp.gatsbyImageData} alt=""/>)
-  )
-  */
 
   return (
     <Lightbox
@@ -32,13 +38,13 @@ const LightboxContainer = ({
       discourageDownloads={true}
       clickOutsideToClose={true}
       imageCaption={getTitle(images[selectedImage].node.childImageSharp.fixed.originalName)}
-      mainSrc={toString(array[selectedImage])}
-      nextSrc={toString(array[(selectedImage + 1) % array.length])}
-      prevSrc={toString(array[(selectedImage + array.length - 1) % images.length])}
+      mainSrc={array[selectedImage]}
+      nextSrc={array[(selectedImage + 1) % array.length]}
+      prevSrc={array[(selectedImage + array.length - 1) % images.length]}
       onCloseRequest={handleClose}
       onMovePrevRequest={handlePrevRequest(selectedImage, array.length)}
       onMoveNextRequest={handleNextRequest(selectedImage, array.length)}
-    />
+    /> 
   )
 }
 

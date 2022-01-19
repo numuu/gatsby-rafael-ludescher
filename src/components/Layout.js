@@ -3,6 +3,7 @@ import Footer from './Footer'
 import * as layoutStyles from './_Layout.module.scss'
 import StyledBackgroundSection from './StyledBackgroundSection'
 import ImageLightBox from './ImageLightbox'
+//import NonStretchedImage from './NonStretchedImage'
 
 const Layout = (props) => {
     if (props.directory !== undefined || 0){

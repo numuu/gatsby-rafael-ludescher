@@ -2,9 +2,11 @@ import React from "react"
 import { GatsbyImage } from "gatsby-plugin-image"
 
 const NonStretchedImage = props => {
+  console.log("props Width " + props.GatsbyImage.width);
   let normalizedProps = props
   if (props.gatsbyImageData.width > props.gatsbyImageData.height){
     if (props.gatsbyImageData && props.gatsbyImageData.width) {
+      console.log("VERTICAL");
       normalizedProps = {
         ...props,
         style: {
@@ -19,11 +21,12 @@ const NonStretchedImage = props => {
           margin: "50px auto 0", 
           //maxHeight: window.innerHeight - 100,
           //maxHeight: props.fluid.presentationHeightg
-        },
+        }
       }
     }
   } else {
-    if (props.fluid && props.gatsbyImageData.height) {
+    if (props.gatsbyImageData && props.gatsbyImageData.height) {
+      console.log("HORIZONTAL");
       normalizedProps = {
         ...props, 
         style: {
@@ -45,6 +48,6 @@ const NonStretchedImage = props => {
     }
   }
 
-  return <GatsbyImage {...normalizedProps} />
+  return <GatsbyImage image = {props.gatsbyImageData} {...normalizedProps}/>
 }
 export default NonStretchedImage

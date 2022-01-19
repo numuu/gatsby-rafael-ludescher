@@ -14,7 +14,7 @@
   }
 
   .textcontainer {
-      display:grid inline-grid;
+      display:grid;
       grid-column: 3/4;
       grid-row: 2/4;
       grid-template-rows: 1fr 40px;
@@ -24,7 +24,7 @@
       //width: 350px;
       height: 650px;
       margin: 3px;
-      margin-bottom: 20px;
+      margin-bottom: 30px;
       padding: 5px;
   }
 
@@ -37,29 +37,17 @@
     }
  }
 
- .textbox{
-    align-content: flex-end;    
- }
-
-.logosContainer {
-    position: relative;
-    display:  inline;
-    bottom: 0px;
-}
-
 .logos {
-     // min-width: 100%;
-      position:inherit;
+      min-width: 100%;
+      position: relative;
       bottom: 0px;
       display: inline;
-      text-align: center;
-
-      margin: 10px;
+      text-align: right;
   }
 
  .logo {
-    max-height: 40px;
-    //max-width: 100px;
+    height: 30px;
+    max-width: 100px;
     padding: 0;
     margin: 0;
     margin-left: 5px;
@@ -68,14 +56,14 @@
 li {
       display:inline-block;
      // max-height: 30px;
-     // width: 100px;
+      width: 100px;
       margin-left: 1em;
      // float: right;
 }
 
 
 ul {
-    max-height: 40px;
+    max-height: 30px;
    // width: 100px;
     //float: right;
 }

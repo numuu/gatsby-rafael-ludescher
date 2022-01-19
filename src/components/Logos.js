@@ -15,7 +15,7 @@ const Logos = ({ originalNames }) => {
                       node {
                         relativePath
                         childImageSharp {
-                          gatsbyImageData(layout: FIXED, height: 30)
+                          gatsbyImageData(layout: FIXED, height:35)
                           id
                         }
                       }
@@ -44,7 +44,7 @@ const Logos = ({ originalNames }) => {
     console.log("images: " + images);
 
     return images.map((image) => (
-        <li key={image.node.childImageSharp.id}>
+        <li key={image.node.childImageSharp}>
             <GatsbyImage
             
             image = {image.node.childImageSharp.gatsbyImageData}

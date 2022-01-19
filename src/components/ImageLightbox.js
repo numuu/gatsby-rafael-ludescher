@@ -18,11 +18,14 @@ const GalleryComponent = ({directory}) => {
     setSelectedImage(selectedImage)
   }
   const handleClose = () => {
+    console.log("Handle closed");
     setShowLightbox(false)
     setSelectedImage(selectedImage)
   }
   const handlePrevRequest = (i, length) => e => {
-    setSelectedImage((i - 1 + length) % length)
+    const nextIdx = (i - 1 + length) % length
+    //debugger
+    setSelectedImage(nextIdx)
   }
   const handleNextRequest = (i, length) => e => {
     setSelectedImage((i + 1) % length)
@@ -41,7 +44,7 @@ const GalleryComponent = ({directory}) => {
                   fixed {
                     originalName
                   }
-                  gatsbyImageData(layout: FIXED, width: 800, quality: 90)
+                  gatsbyImageData(layout: FIXED, width: 1000, quality: 90)
                 }
               }
             }
@@ -52,20 +55,26 @@ const GalleryComponent = ({directory}) => {
 
 
       render={data => {    
-       // console.log("before render " + data.source.edges);    
-        const images = [];
+       // console.log("before render " + data.source.edges); 
+       
+        // const images = [];
         
-        for ( var i = 0; i < data.source.edges.length; i++){
-           // console.log("relativeDirectory " + i + ": " + data.source.edges[i].node.relativeDirectory); 
-            if(data.source.edges[i].node.relativeDirectory === "img/" + directory){
-                images.push(data.source.edges[i])
-            }
-        } 
-        if (!images){
+        // for ( var i = 0; i < data.source.edges.length; i++){
+        //    // console.log("relativeDirectory " + i + ": " + data.source.edges[i].node.relativeDirectory); 
+        //     if(data.source.edges[i].node.relativeDirectory === ("img/" + directory)){
+        //         images.push(data.source.edges[i])
+        //     }
+        // }
+        // images.sort(compare);
+
+        const images = data.source.edges
+          .filter((val) => val.node.relativeDirectory === ("img/" + directory))
+          .sort(compare);
+        if (!images.length){
             return null;
         }
 
-        images.sort(compare);
+        
         /*
         console.log("directory: " + directory);
         console.log("selected Image in ImageLightbox: " + selectedImage);
