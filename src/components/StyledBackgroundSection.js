@@ -5,6 +5,8 @@ import BackgroundImage from 'gatsby-background-image'
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 
+//import * as BackgroundStyles from './_StyledBackgroundSection.scss'
+
 //import styled from 'styled-components'
 
 const StyledBackgroundSection = ({ fileName }) => {
@@ -44,17 +46,18 @@ const StyledBackgroundSection = ({ fileName }) => {
                 {...bgImage}
                 preserveStackingContext
             >
-                <div style={{
-                    
+                <div style={{  
                     position: `absolute`,
-                    backgroundPosition:`left`,
+                    backgroundPosition:`center`,
                     backgroundRepeat: `no-repeat`,
                     backgroundSize: `cover`,
                     objectFit: `cover`,
+                    //overflow: `hidden`,
                   
                     filter: `blur(12px)`,
                                       
-                    height: `1 em`,
+                    height: `120%`,
+                    //vmin: `120%`,
                     minWidth: `100%`}}>
                         <GatsbyImage image={image} alt={""}/>
                     </div>
