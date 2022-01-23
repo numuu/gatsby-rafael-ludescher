@@ -16,6 +16,7 @@ const Logos = ({ originalNames }) => {
                         relativePath
                         childImageSharp {
                           gatsbyImageData(layout: FIXED, height:35)
+                          placeholder: BLURRED
                           id
                         }
                       }
