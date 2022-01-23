@@ -77,7 +77,7 @@ const About = () => {
                         </tr>
                         <tr>
                           <td>Juli, August 2014</td>
-                          <td><a href = "https://onlinetheperformance.tumblr.com/"><i>OnLine - The Performance</i></a></td> 
+                          <td><a href = "https://onlinetheperformance.tumblr.com/" target="_blank" rel="noopener noreferrer"><i>OnLine - The Performance</i></a></td> 
                           <td>Salotto Vienna, Triest; Heart of Noise, Innsbruck; Architekturbiennale, Venedig</td>
                         </tr>
                         <tr>
