@@ -6,6 +6,7 @@
 
     font-size: 70px;
     font-weight: 900;
+    line-height: 50px;
     text-align: center;
   
     width: 100%;
@@ -17,19 +18,25 @@
     color: black;
   
     display: inline-block; 
-    vertical-align: middle;
+    top: -100%;
   
-    padding-top: 5%;
+    padding-top: 0;
   }
 
 .titlecontainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: rgba(255,255,255, 0.85);
 
     margin: 3px;
-    padding: 5px; 
+    padding: 10px; 
+    padding-bottom: 20px;
 
-    grid-column: 2/3;
-    grid-row: 2/3;
+    min-height: 100px;
+    
+    grid-column: 2;
+    grid-row: 2;
   }
 
   @media only screen and (max-width: 1200px) {

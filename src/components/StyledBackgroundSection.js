@@ -46,20 +46,25 @@ const StyledBackgroundSection = ({ fileName }) => {
                 {...bgImage}
                 preserveStackingContext
             >
-                <div style={{  
-                    position: `absolute`,
-                    backgroundPosition:`center`,
-                    backgroundRepeat: `no-repeat`,
-                    backgroundSize: `cover`,
-                    objectFit: `cover`,
-                    //overflow: `hidden`,
-                  
-                    filter: `blur(12px)`,
-                                      
-                    height: `120%`,
-                    //vmin: `120%`,
-                    minWidth: `100%`}}>
-                        <GatsbyImage image={image} alt={""}/>
+                <div style={{
+                    position: `fixed`,
+                    height: `100vh`, 
+                    width: `100vw`
+                }}>
+                    <div style={{  
+                        position: `absolute`,
+                        backgroundPosition:`center`,
+                        backgroundRepeat: `no-repeat`,
+                        backgroundSize: `cover`,
+                        objectFit: `cover`,
+                    
+                        filter: `blur(5px)`,
+                                        
+                        height: `150%`,
+                        minHeight: `100vh`,
+                        minWidth: `100%`}}>
+                            <GatsbyImage image={image} alt={""}/>
+                        </div>
                     </div>
             </BackgroundImage>
     );

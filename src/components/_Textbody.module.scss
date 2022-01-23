@@ -3,6 +3,7 @@
     font-size: 16px;
     margin: 5px;
     margin-bottom: 5px;
+    padding: 10px;
     padding-bottom: 30px;
 
     grid-row: 1/2;
@@ -11,10 +12,11 @@
   h2 {
       font-size: 20px;
       line-height: 20px;
+      margin-top: 0;
   }
 
   .textcontainer {
-      display:grid inline-grid;
+      display:grid;
       grid-column: 3/4;
       grid-row: 2/4;
       grid-template-rows: 1fr 40px;
@@ -22,9 +24,9 @@
       background-color: rgba(255, 255, 255 , 0.85);
 
       //width: 350px;
-      height: auto;
+      height: 100%;
       margin: 3px;
-      padding: 5px;
+     // padding: 5px;
   }
 
   @media only screen and (max-width: 1200px){
@@ -37,13 +39,14 @@
  }
 
  .textbox{
-    align-content: flex-end;    
+    align-content: flex-end;  
+    justify-content: baseline;  
  }
 
 .logosContainer {
     position: relative;
     display:  inline;
-    bottom: 0px;
+    bottom: 10px;
 }
 
 .logos {
@@ -77,4 +80,8 @@ ul {
     max-height: 40px;
    // width: 100px;
     //float: right;
+}
+
+td {
+    font-size: 11px;
 }

@@ -47,7 +47,7 @@ const About = () => {
                         <tr>
                           <td>Juni 2018</td>
                           <td><Link to = '/um1plusn'><i>Um1+n</i></Link></td> 
-                          <td>Diplom mit Auszeichnung, »digitale kunst«, Ruth Schnell, Universität für Angewandte Kunst, Wien</td>
+                          <td>Diplom mit Auszeichnung, »digitale kunst«, Universität für Angewandte Kunst, Wien</td>
                         </tr>
                         <tr>
                           <td>Juni 2017</td>

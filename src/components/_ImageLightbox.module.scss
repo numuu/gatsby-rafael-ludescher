@@ -4,14 +4,16 @@
     padding: 0px; 
 
     width: auto;
-    max-height: 650px;
+    height: 480px;
+    //max-height: 650px;
 
     overflow: hidden;
     
     grid-column: 2/3;
     grid-row: 3/4;
+
 }
 
 .image{
-    height: 650px;
+    max-height: 640px;
 }

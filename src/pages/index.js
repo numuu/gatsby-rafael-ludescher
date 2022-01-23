@@ -10,13 +10,22 @@ import Title from '../components/Title'
 import Footer from '../components/Footer'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 
+import * as layoutStyles from '../components/_Layout.module.scss'
+
 const IndexPage = () => {
     var bg = 'index_background.jpg';
     return (
         <div>
-             <div>
-                <Title>rafael ludescher</Title>
-                <Footer/>
+            <div className={layoutStyles.wrapper}>
+                <div style={{
+                    position: `absolute`,
+                    top: `50%`,
+                    left: `50%`,
+                    transform: `translate(-50%, -50%)`
+                }}>
+                    <Title>rafael ludescher</Title>
+                    <Footer/>
+                </div>
             </div>
             <StyledBackgroundSection fileName = {bg} />
         </div>
