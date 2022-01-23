@@ -15,8 +15,7 @@ const Logos = ({ originalNames }) => {
                       node {
                         relativePath
                         childImageSharp {
-                          gatsbyImageData(layout: FIXED, height:35)
-                          placeholder: BLURRED
+                          gatsbyImageData(layout: FIXED,  placeholder: BLURRED, height:35)
                           id
                         }
                       }
