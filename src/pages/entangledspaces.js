@@ -8,7 +8,7 @@ import Textbody from '../components/Textbody'
 const entangledspaces = () => {
     var bg = 'entangledspaces_background.jpg';
     var directory = 'entangledspaces';
-    var logos = ["BKA.png", "Angewandte_black.png", "Angewandte.png", "IBK.png"];
+    var logos = ["Vorbrenner.png", "BKA.png", "IBK.png", "LandTirol.png"];
     return (
         <div>
             <Layout fileName = {bg} directory = {directory}>

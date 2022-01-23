@@ -8,7 +8,7 @@ import Textbody from '../components/Textbody'
 const um1plusn = () => {
     var bg = 'um1plusn_background.jpg';
     var directory = 'um1plusn';
-    var logos = ["BKA.png", "Angewandte_black.png", "Angewandte.png", "IBK.png"];
+    var logos = ["Angewandte_black.png"];
     return (
         <div>
             <Layout fileName = {bg} directory = {directory}>

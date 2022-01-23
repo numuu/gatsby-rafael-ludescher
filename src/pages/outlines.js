@@ -8,7 +8,7 @@ import Textbody from '../components/Textbody'
 const outlines = () => {
     var bg = 'outlines_background.jpg';
     var directory = 'outlines';
-    var logos = ["BKA.png", "Angewandte_black.png", "Angewandte.png", "IBK.png"];
+    var logos = ["BKA.png", "Angewandte_black.png", "IBK.png", "LandTirol.png"];
     return (
         <div key={directory + "_"}>
             <Layout fileName={bg} directory={directory} keyprop={directory + "_Layout"}>

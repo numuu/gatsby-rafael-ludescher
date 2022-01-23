@@ -8,7 +8,7 @@ import Textbody from '../components/Textbody'
 const meerorme = () => {
     var bg = 'meerorme_background.jpg';
     var directory = 'meerorme';
-    var logos = ["BKA.png", "Angewandte_black.png", "IBK.png"];
+    var logos = ["LandVorarlberg.png"];
     return (
         <div key={directory.toString()}>
             <Layout fileName = {bg} directory = {directory} key={directory.toString() + "_layout"}>
