@@ -44,7 +44,7 @@ const GalleryComponent = ({directory}) => {
                   fixed {
                     originalName
                   }
-                  gatsbyImageData(layout: FIXED, width: 1000, quality: 90)
+                  gatsbyImageData(layout: FIXED, width: 1000, placeholder: BLURRED, quality: 90)
                 }
               }
             }

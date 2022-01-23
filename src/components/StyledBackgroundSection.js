@@ -19,7 +19,7 @@ const StyledBackgroundSection = ({ fileName }) => {
                       node {
                         relativePath
                         childImageSharp {
-                          gatsbyImageData(layout: FULL_WIDTH)
+                          gatsbyImageData(layout: FULL_WIDTH, placeholder: BLURRED)
                         }
                       }
                     }
