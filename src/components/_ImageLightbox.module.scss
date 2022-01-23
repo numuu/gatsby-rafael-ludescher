@@ -17,3 +17,10 @@
 .image{
     max-height: 640px;
 }
+
+@media only screen and (max-width: 1200px) {
+    .imagecontainer{
+      grid-column: 2/3;
+      grid-row: 3/4;
+    }
+}

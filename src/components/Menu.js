@@ -11,7 +11,7 @@ const Menu = () => {
             <Button to='/um1plusn'>um1plusn</Button>
             <Button to='/meerorme'>meerorme</Button>
             <Button to='/outlines'>outlines</Button>
-            <Button to='/unfoldingseries'>unfolding series</Button>
+            <Button to='/unfoldingseries'>(un(folding series</Button>
             <Button to='/dom_ino'>dom_ino</Button>
             <Button to='/about'>about</Button>
         </div>
