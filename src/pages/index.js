@@ -11,6 +11,7 @@ import Footer from '../components/Footer'
 import StyledBackgroundSection from '../components/StyledBackgroundSection'
 
 import * as layoutStyles from '../components/_Layout.module.scss'
+import "../styles/global.scss"
 
 const IndexPage = () => {
     var bg = 'index_background.jpg';

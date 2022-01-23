@@ -7,7 +7,7 @@ const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
             <Menu/>
-            <p className = {footerStyles.contactFooter}><a href = "mailto:rafael-ludescher@numu.at"> rafael-ludescher@numu.at</a> &copy; 2019 rafael ludescher</p>
+            <p className = {footerStyles.contactFooter}><a href = "mailto:rafael-ludescher@numu.at"> rafael-ludescher@numu.at</a> &copy; 2022 rafael ludescher</p>
             
         </footer>
     )

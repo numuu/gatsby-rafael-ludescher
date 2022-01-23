@@ -1,3 +1,17 @@
+.wrapper{
+  min-width: 640px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+//  transform-box: translate();
+  z-index: 2;
+  width: 100%;
+  margin:0;
+  padding:0;
+}
+
+/*
 .background {
     position: relative;
     background-position: left;
@@ -10,20 +24,9 @@
   
     height: 150vmax;
     min-width: 100%;
-}
+}*/
 
-.wrapper{
-    min-width: 640px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  //  transform-box: translate();
-    z-index: 2;
-    width: 100%;
-  }
-
-  .content{
+.content{
    // position:absolute;
     display: grid;
 
@@ -47,6 +50,7 @@
 
     .wrapper{
       height: 100%;
+      overflow-y:initial;
     }
 
     .content { 

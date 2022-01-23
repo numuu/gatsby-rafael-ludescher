@@ -5,7 +5,7 @@ import BackgroundImage from 'gatsby-background-image'
 import { getImage, GatsbyImage } from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 
-//import * as BackgroundStyles from './_StyledBackgroundSection.scss'
+import * as backgroundStyles from './_StyledBackgroundSection.module.scss'
 
 //import styled from 'styled-components'
 
@@ -48,21 +48,11 @@ const StyledBackgroundSection = ({ fileName }) => {
             >
                 <div style={{
                     position: `fixed`,
-                    height: `100vh`, 
-                    width: `100vw`
+                    height: `200vh`, 
+                    width: `200vw`,
+                    translate:`-50%, -50%`
                 }}>
-                    <div style={{  
-                        position: `absolute`,
-                        backgroundPosition:`center`,
-                        backgroundRepeat: `no-repeat`,
-                        backgroundSize: `cover`,
-                        objectFit: `cover`,
-                    
-                        filter: `blur(5px)`,
-                                        
-                        height: `150%`,
-                        minHeight: `100vh`,
-                        minWidth: `100%`}}>
+                    <div className={backgroundStyles.background}>
                             <GatsbyImage image={image} alt={""}/>
                         </div>
                     </div>

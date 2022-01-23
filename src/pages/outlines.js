@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
+import "../styles/global.scss"
+
 const outlines = () => {
     var bg = 'outlines_background.jpg';
     var directory = 'outlines';

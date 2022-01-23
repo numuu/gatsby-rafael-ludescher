@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
+import "../styles/global.scss"
+
 const um1plusn = () => {
     var bg = 'um1plusn_background.jpg';
     var directory = 'um1plusn';

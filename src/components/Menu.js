@@ -12,7 +12,7 @@ const Menu = () => {
             <Button to='/meerorme'>meerorme</Button>
             <Button to='/outlines'>outlines</Button>
             <Button to='/unfoldingseries'>unfolding series</Button>
-            <Button to='/dom_ino'>Dom_Ino</Button>
+            <Button to='/dom_ino'>dom_ino</Button>
             <Button to='/about'>about</Button>
         </div>
     )

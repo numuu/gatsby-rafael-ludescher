@@ -1,17 +1,20 @@
-@import url("https://fonts.googleapis.com/css?family=Raleway|Titillium+Web:400,900&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Raleway|Titillium+Web:400,900&display=swap');
 /* 
 header, section, footer, aside, nav, main, article, figure {
   display: block;
 } */
+
+
 body, html {
-  font-family: 'Titillium Web', sans-sarif;
-  font-size: 0.9em;
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
+    font-family: 'Titillium Web', sans-sarif;
+    font-size: 0.9em;
+    height: 100%;
+    margin:0;
+  
+    overflow: hidden;
 }
 
-#gatsby-focus-wrapper {
-  overflow: hidden;
+#gatsby-focus-wrapper{
+  overflow:hidden;
 }
-/*# sourceMappingURL=global.css.map */
+

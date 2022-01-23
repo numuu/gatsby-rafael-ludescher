@@ -5,6 +5,8 @@ import Layout from '../components/Layout'
 import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
+import "../styles/global.scss"
+
 const dom_ino = () => {
     var bg = 'domino_background.jpg';
     var directory = 'dom_ino';
