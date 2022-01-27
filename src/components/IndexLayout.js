@@ -14,7 +14,7 @@ const IndexLayout = (props) => {
     return (
         <div>
             <div className={layoutStyles.wrapper}>
-                <div>
+                <div className={layoutStyles.content}>
                     <Title>rafael ludescher</Title>
                     <Footer/>
                 </div>

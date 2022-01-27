@@ -4,7 +4,7 @@ import React from "react"
 //https://reactjsexample.com/lightbox-for-components-or-images-built-for-react/
 import Lightbox from "react-image-lightbox"
 import 'react-image-lightbox/style.css'
-import { GatsbyImage } from "gatsby-plugin-image" 
+//import { GatsbyImage } from "gatsby-plugin-image" 
 //import NonStretchedImage from "./nonStretchedImage"
 
 //import NonStretchedImage from "./NonStretchedImage.js"
@@ -29,12 +29,12 @@ const LightboxContainer = ({
 
   const array = images.map((val) => val.node.childImageSharp.gatsbyImageData.images.fallback.src)
 
-  console.log('array', array)
+  //console.log('array', array)
   
 
   return (
     <Lightbox
-      enableZoom={false}
+      enableZoom={true}
       discourageDownloads={true}
       clickOutsideToClose={true}
       imageCaption={getTitle(images[selectedImage].node.childImageSharp.fixed.originalName)}
@@ -44,6 +44,7 @@ const LightboxContainer = ({
       onCloseRequest={handleClose}
       onMovePrevRequest={handlePrevRequest(selectedImage, array.length)}
       onMoveNextRequest={handleNextRequest(selectedImage, array.length)}
+      animationDisabled={true}
     /> 
   )
 }

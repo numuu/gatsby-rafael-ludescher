@@ -22,10 +22,10 @@
       grid-template-rows: 1fr 40px;
 
       background-color: rgba(255, 255, 255 , 0.85);
-
       //width: 350px;
-      height: 100%;
-      margin: 3px;
+      height: -webkit-fill-available;
+      margin: 0;
+      margin-top: 3px;
      // padding: 5px;
   }
 
@@ -54,7 +54,7 @@
       position:inherit;
       bottom: 0px;
       display: inline;
-      text-align: center;
+      text-align: right;
 
       margin: 10px;
   }

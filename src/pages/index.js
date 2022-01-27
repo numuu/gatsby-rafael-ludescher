@@ -18,14 +18,9 @@ const IndexPage = () => {
     return (
         <div>
             <div className={layoutStyles.wrapper}>
-                <div style={{
-                    position: `absolute`,
-                    top: `50%`,
-                    left: `50%`,
-                    transform: `translate(-50%, -50%)`
-                }}>
+                <div className={layoutStyles.indexcontent}>
                     <Title>rafael ludescher</Title>
-                    <Footer/>
+                    <Footer styleBool = {true}/>
                 </div>
             </div>
             <StyledBackgroundSection fileName = {bg} />

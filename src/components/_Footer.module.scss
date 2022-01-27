@@ -10,6 +10,21 @@
     margin-top: 15px;
     padding: 0px;
 }
+
+.indexFooter{
+    font-family: 'Titillium Web', sans-sarif;
+    font-size: 8px;
+
+    grid-column: 2/3;
+    grid-row: 2/3;
+  
+    text-align: right; 
+    margin: 0px;
+    margin-top: 15px;
+    padding: 0px;
+}
+
+
 .contactFooter{
     display: inline-block;
     position: relative;
@@ -32,11 +47,20 @@ a:link {
 }
 
 @media only screen and (max-width: 1200px){
+    .indexFooter {
+        grid-column: 2/3;
+        grid-row: 3/4;
+
+        text-align: center;
+    }
+
     .footer {
         grid-column: 2/3;
         grid-row: 6/7;
 
         text-align: center;
     }
+
+
 }
 

@@ -15,7 +15,18 @@
 }
 
 .image{
-    max-height: 640px;
+    min-height: 100%;
+    max-width: 100%;
+
+    transform: scale3d(1, 1, 1);
+}
+
+#element.style{
+    transform: scale3d(1, 1, 1);
+}
+
+.ril-image-current, .ril__image, .ril__imageDiscourager, .ril__imagePrev, .ril__imageNext{
+    transform: scale3d(1, 1, 1);
 }
 
 @media only screen and (max-width: 1200px) {
