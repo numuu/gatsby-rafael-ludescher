@@ -15,19 +15,20 @@
     margin: 0;
     padding: 0px;
   
-    color: black;
+    color:rgba(0,0,0,1);
   
     display: inline-block; 
     top: -100%;
   
     padding-top: 0;
+
   }
 
 .titlecontainer {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgba(255,255,255, 0.85);
+    background-color: rgba(255,255,255, 0.65);
 
     margin: 3px;
     padding: 10px; 
@@ -37,6 +38,8 @@
     
     grid-column: 2;
     grid-row: 2;
+
+    mix-blend-mode:difference;
   }
 
   @media only screen and (max-width: 1200px) {
