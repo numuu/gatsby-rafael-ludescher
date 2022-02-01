@@ -12,7 +12,7 @@
 }
 
 .background{
-    position: absolute;
+    position: relative;
     background-position:center;
     background-repeat: no-repeat;
     background-size: inherit;
@@ -21,13 +21,21 @@
     transform: translate(0, -25%);
     filter: blur(10px);
                     
-    min-height: 200vh;
-    width: 200vw;
+    width: 150vw;
+    min-height: 150vh;
+
+    translate: -50%, -50%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
     .background{
-        height: 200vh;
-        min-width: 200vw;
+        width: 100vw;
+        min-height: 100vh;
     }
 }
+
+.gatsby-image-wrapper{
+    position: absolute;
+}
+
+

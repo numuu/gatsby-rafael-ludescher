@@ -16,12 +16,15 @@ const unfoldingseries = () => {
             <Layout fileName = {bg} directory = {directory}>
                 <Title>(un(folding series</Title>
                 <Textbody originalNames = {logos}>
-                    <p><b><i>(un(folding series</i></b> consists of a series of plaster frames, each
-                        of which has a lenticular print embedded in it, with a fabric
-                        surface in the background underneath.The lenticular print
-                        depicts the fabric with imaginary folds it might have had. Through
-                        the perspective of the viewer, the imaginary fabric gains a
-                        physicality through the lenticular print that the real one lacks.
+                    <p><b><i>(un(folding series</i></b> besteht aus einer Reihe an dreidimensionalen 
+                    Gipsrahmen, in denen jeweils ein Lentikulardruck eingebettet 
+                    ist. Der jeweilige Lentikulardruck bildet dabei das in Falten geworfene Textil ab, 
+                    welches eine Ebene dahinter faltenlos aufgespannt ist.
+                    Die virtuellen Falten zeigen eine Form, die das reale, glatt 
+                    dahinter angebrachte Textil haben könnte. Durch die Perspektive der 
+                    betrachtenden Person entfalten diese virtuellen Falten 
+                    schließlich eine Körperlichkeit, die dem echten Textil abhanden 
+                    gekommen ist.
                   </p>
                 </Textbody>
             </Layout>

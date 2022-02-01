@@ -2,7 +2,7 @@ import React from 'react'
 
 import { graphql, useStaticQuery } from 'gatsby'
 import BackgroundImage from 'gatsby-background-image'
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { getImage} from "gatsby-plugin-image"
 import { convertToBgImage } from "gbimage-bridge"
 
 import * as backgroundStyles from './_StyledBackgroundSection.module.scss'
@@ -46,16 +46,7 @@ const StyledBackgroundSection = ({ fileName }) => {
                 {...bgImage}
                 preserveStackingContext
             >
-                <div style={{
-                    position: `fixed`,
-                    height: `200vh`, 
-                    width: `200vw`,
-                    translate:`-50%, -50%`
-                }}>
-                    <div className={backgroundStyles.background}>
-                            <GatsbyImage image={image} alt={""}/>
-                        </div>
-                    </div>
+                <div className={backgroundStyles.background}></div>
             </BackgroundImage>
     );
     

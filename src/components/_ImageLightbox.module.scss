@@ -31,6 +31,9 @@
 
 @media only screen and (max-width: 1200px) {
     .imagecontainer{
+      width: auto;
+      height: 100%;
+
       grid-column: 2/3;
       grid-row: 3/4;
     }
