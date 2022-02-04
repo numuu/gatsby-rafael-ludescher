@@ -6,6 +6,7 @@ import styled from 'styled-components'
 import BackgroundImage from 'gatsby-background-image'*/
 
 import Footer from './Footer'
+import Title from './Title'
 import * as layoutStyles from './_Layout.module.scss'
 
 import StyledBackgroundSection from './StyledBackgroundSection'
@@ -14,9 +15,9 @@ const IndexLayout = (props) => {
     return (
         <div>
             <div className={layoutStyles.wrapper}>
-                <div className={layoutStyles.content}>
-                    <Title>rafael ludescher</Title>
-                    <Footer/>
+                <div className={layoutStyles.indexcontent}>
+                    <Title title = {props.title}/>
+                    <Footer styleBool={true}/>
                 </div>
             </div>
             <StyledBackgroundSection fileName = {props.fileName} />
