@@ -20,6 +20,16 @@ const About = () => {
                       <p>studium »digitale kunst«, ruth schnell und »transmediale kunst«, brigitte kowanz, universität für angewandte kunst, wien sowie »bildhauerei«, hannes brunner, weißensee kunsthochschule, berlin.</p>
                     <table>
                       <tbody>
+                      <tr>
+                          <td>November 2021</td>
+                          <td><Link to = '/dom_ino'><i>Dom_Ino</i></Link></td>  
+                          <td>das Lot, Wien</td>
+                        </tr>
+                        <tr>
+                          <td>November 2021</td>
+                          <td><Link to = '/unfoldingseries'><i>(un(folding series</i></Link></td>  
+                          <td>das Lot, Wien</td>
+                        </tr>
                         <tr>
                           <td>September 2019</td>
                           <td></td>  
