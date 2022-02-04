@@ -52,23 +52,25 @@
 
     .wrapper{
       overflow-y:scroll;
+      height: 100%;
+      
     }
 
     .content { 
-      position:relative;
+      display:list-item;
+     // position:relative;
 
-      display:grid;
-      overflow-y:scroll;
+     // display:block;
+    //  overflow-y:scroll;
 
-      vertical-align: auto;
-      align-items: baseline;
-      justify-items: stretch;
+    //  vertical-align: auto;
+    //  align-items: baseline;
+    //  justify-items: stretch;
 
-      padding:0;
+     // padding:0;
 
-      grid-template-columns: auto 80vw auto;
-      grid-template-rows: auto 0.15fr 0.3fr auto 5px auto
-    //  grid-template-rows: 5em 100px 400px 1fr 50px 50px;
+     // grid-template-columns: auto 80vw auto;
+     // grid-template-rows: auto 0.15fr 0.3fr auto 5px auto
 
      // vertical-align: center;
     }

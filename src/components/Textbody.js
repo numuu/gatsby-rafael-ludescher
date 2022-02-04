@@ -22,6 +22,16 @@ const Textbody = (props) => {
                 </div>
             </div>
         )
+    } else if(props.originalNames === undefined && props.originalNames !== undefined){
+        return (
+            <div className={textStyles.textcontainer} key={props.keyprop + textStyles.textcontainer}>
+                <div className={textStyles.textbox} key={props.keyprop + textStyles.textbox}>
+                    <div className={textStyles.text}>
+                        {props.children}  
+                    </div>
+                </div>
+            </div>
+        )
     } else {
         return (
             <div className={textStyles.textcontainer}>

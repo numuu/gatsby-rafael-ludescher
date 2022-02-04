@@ -2,7 +2,6 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,11 +9,11 @@ import "../styles/global.scss"
 const dom_ino = () => {
     var bg = 'domino_background.jpg';
     var directory = 'dom_ino';
+    var title = 'Dom_Ino';
     var logos = ["LandVorarlberg.png", "BKA.png"];
     return (
         <div>
-            <Layout fileName = {bg} directory = {directory}>
-                <Title>Dom_Ino</Title>
+            <Layout fileName = {bg} title = {title} directory = {directory}>
                 <Textbody originalNames = {logos}>
                     <p><b><i>Dom_Ino</i></b>, dessen Titel auf das Legespiel sowie auf das Konzept des modernen Architekten Le Corbusier rekurriert, 
                         ist eine VR-Installation, die mit der Fragilität der Digitalität und deren Wechselwirkung mit der Realität spielt. 

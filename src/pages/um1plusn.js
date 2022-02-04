@@ -2,7 +2,6 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,11 +9,11 @@ import "../styles/global.scss"
 const um1plusn = () => {
     var bg = 'um1plusn_background.jpg';
     var directory = 'um1plusn';
+    var title = 'Um1+n';
     var logos = ["Angewandte_black.png"];
     return (
         <div>
-            <Layout fileName = {bg} directory = {directory}>
-                <Title>Um1plusn</Title>
+            <Layout fileName = {bg} title={title} directory = {directory}>
                 <Textbody originalNames = {logos}>
                 <h2 id = "teaser">Um1+n ist eine kybernetische Rauminstallation mit zwei skulpturalen, sich bewegenden Apparaturen. Die Apparaturen – präziser
                   deren Kameras – geben ihr erfasstes Bild in Rückkoppelungsschleifen wieder und schreiben dabei den Umraum endlos auf

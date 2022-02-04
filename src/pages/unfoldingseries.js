@@ -2,7 +2,6 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,12 +9,11 @@ import "../styles/global.scss"
 const unfoldingseries = () => {
     var bg = 'unfoldingseries_background.jpg';
     var directory = 'unfolding series';
-    var logos = ["LandVorarlberg.png"];
+    var title = '(un(folding series';
     return (
         <div>
-            <Layout fileName = {bg} directory = {directory}>
-                <Title>(un(folding series</Title>
-                <Textbody originalNames = {logos}>
+            <Layout fileName = {bg} title={title} directory = {directory}>
+                <Textbody>
                     <p><b><i>(un(folding series</i></b> besteht aus einer Reihe an dreidimensionalen 
                     Gipsrahmen, in denen jeweils ein Lentikulardruck eingebettet 
                     ist. Der jeweilige Lentikulardruck bildet dabei das in Falten geworfene Textil ab, 

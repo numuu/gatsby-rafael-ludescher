@@ -48,15 +48,15 @@ a:link {
 
 @media only screen and (max-width: 1200px){
     .indexFooter {
-        grid-column: 2/3;
-        grid-row: 3/4;
+       // grid-column: 2/3;
+       // grid-row: 3/4;
 
         text-align: center;
     }
 
     .footer {
-        grid-column: 2/3;
-        grid-row: 6/7;
+        //grid-column: 2/3;
+        //grid-row: 6/7;
 
         text-align: center;
     }

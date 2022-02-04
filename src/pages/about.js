@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
+
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,10 +10,10 @@ import "../styles/global.scss"
 
 const About = () => {  
     var bg = 'about_background.jpg';
+    var title = 'about';
     return (
         <div>
-            <Layout fileName = {bg}>
-              <Title>about</Title>
+            <Layout fileName = {bg} title={title}>
               <Textbody>
                   <p>
                       <b><i>rafael ludescher</i></b> lebt und arbeitet in wien.</p>

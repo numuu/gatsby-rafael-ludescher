@@ -2,7 +2,6 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,11 +9,11 @@ import "../styles/global.scss"
 const outlines = () => {
     var bg = 'outlines_background.jpg';
     var directory = 'outlines';
+    var title = 'outlines';
     var logos = ["BKA.png", "Angewandte_black.png", "IBK.png", "LandTirol.png"];
     return (
         <div key={directory + "_"}>
-            <Layout fileName={bg} directory={directory} keyprop={directory + "_Layout"}>
-                <Title>outlines</Title>
+            <Layout fileName={bg} title={title} directory={directory} keyprop={directory + "_Layout"}>
                 <Textbody originalNames = {logos} keyprop={directory + "_Textbody"}>
                     <p>Der experimentelle Kurzfilm Outlines zweckentfremdet die 3DTechnologie, um damit die Linearität des Filmgeschehens aufzubrechen und die Möglichkeiten der dreidimensionalen Darstellung zu erforschen. Aufgrund einer Manipulation von aktiven
                   3D-Shutter-Brillen wird es möglich, mehrere Filme gleichzeitig

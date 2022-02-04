@@ -2,7 +2,7 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
+//import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,11 +10,11 @@ import "../styles/global.scss"
 const meerorme = () => {
     var bg = 'meerorme_background.jpg';
     var directory = 'meerorme';
+    var title = 'me.er.or.me';
     var logos = ["LandVorarlberg.png"];
     return (
         <div key={directory.toString()}>
-            <Layout fileName = {bg} directory = {directory} key={directory.toString() + "_layout"}>
-                <Title>me er or me</Title>
+            <Layout fileName = {bg} directory = {directory} title = {title} key={directory.toString() + "_layout"}>
                 <Textbody originalNames = {logos} directory={directory} key={directory.toString() + "_textbody"}>
                     <p>
                     <b><i>me.er.or.me</i></b> experimentiert mit der De-Konstruktion

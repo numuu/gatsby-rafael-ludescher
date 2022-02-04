@@ -2,7 +2,6 @@ import React from 'react'
 //import { Link } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Title from '../components/Title'
 import Textbody from '../components/Textbody'
 
 import "../styles/global.scss"
@@ -10,11 +9,11 @@ import "../styles/global.scss"
 const entangledspaces = () => {
     var bg = 'entangledspaces_background.jpg';
     var directory = 'entangledspaces';
+    var title = 'entangled spaces';
     var logos = ["Vorbrenner.png", "BKA.png", "IBK.png", "LandTirol.png"];
     return (
         <div>
-            <Layout fileName = {bg} directory = {directory}>
-                <Title>entangled spaces</Title>
+            <Layout fileName = {bg} title={title} directory = {directory}>
                 <Textbody originalNames = {logos}>
                 <h2><i>entangled spaces</i>, ein virtuelles Raumschauspiel, spannt sich auf einer realen Bewegungsfläche von 6,5 x 5 Metern auf. Einmal eingetaucht in den virtuellen Raum, beginnen sich zunehmend die physischen Grenzen aufzulösen und eine Welt aus verschachtelten Räumen eröffnet sich.
                     </h2>

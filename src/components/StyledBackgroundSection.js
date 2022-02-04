@@ -46,7 +46,16 @@ const StyledBackgroundSection = ({ fileName }) => {
                 {...bgImage}
                 preserveStackingContext
             >
-                <div className={backgroundStyles.background}></div>
+                <div style={{
+                    height: `200vh`,
+                    width: `200vw`,
+                    filter: `blur(12px)`,
+                    backgroundColor: `transparent`,
+                    backgroundSize: `cover`,
+                    backgroundPosition: `center center`,
+                    display: `flex`,
+                    alignItems: `center`
+                }}></div>
             </BackgroundImage>
     );
     

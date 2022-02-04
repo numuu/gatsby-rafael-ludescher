@@ -3,6 +3,7 @@ import Footer from './Footer'
 import * as layoutStyles from './_Layout.module.scss'
 import StyledBackgroundSection from './StyledBackgroundSection'
 import ImageLightBox from './ImageLightbox'
+import Title from './Title'
 //import NonStretchedImage from './NonStretchedImage'
 
 const Layout = (props) => {
@@ -12,8 +13,9 @@ const Layout = (props) => {
             <div>
                <div className = {layoutStyles.wrapper}>
                    <div className = {layoutStyles.content}>
+                        <Title title = {props.title}/>
+                        <ImageLightBox directory = {props.directory}/>
                         {props.children}
-                       <ImageLightBox directory = {props.directory}/>
                        <Footer/>
                    </div> 
                </div>
@@ -25,6 +27,7 @@ const Layout = (props) => {
             <div>
                <div className = {layoutStyles.wrapper}>
                    <div className = {layoutStyles.content}>
+                       <Title title = {props.title}/>
                        {props.children}
                        <Footer/>
                    </div> 
