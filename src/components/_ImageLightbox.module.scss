@@ -32,8 +32,13 @@
 @media only screen and (max-width: 1200px) {
     .imagecontainer{
       width: auto;
-      height: 100%;
+      max-height: 100%;
 
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-left: 10px;
+      margin-right: 10px;
+    
      // grid-column: 2/3;
      // grid-row: 3/4;
     }
